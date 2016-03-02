@@ -7,7 +7,7 @@ if( !key_exists('is_logged',$_SESSION) || $_SESSION['is_logged']==0  ){
          die;
 }
 mb_internal_encoding('UTF-8');
-$connection = mysqli_connect('localhost', 'Petyo', 'qwerty', 'homework3');
+$connection = mysqli_connect( $database['db_host'], $database['db_user'],$database['db_pass'],$database['db_name']);
 if (!$connection) {
     echo 'no datebase';
     exit;

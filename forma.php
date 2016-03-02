@@ -1,4 +1,5 @@
  <?php
+ 
 $pageTitle = 'Форма за регистрация';
 include 'includes/header.php';
 mb_internal_encoding('UTF-8');
@@ -31,7 +32,7 @@ if($_POST){
         exit;
     }
 
-    $connection = mysqli_connect('localhost', 'Petyo', 'qwerty', 'homework3');
+    $connection = mysqli_connect( $database['db_host'], $database['db_user'],$database['db_pass'],$database['db_name']);
     if (!$connection) {
         echo 'no datebase';
         exit;
